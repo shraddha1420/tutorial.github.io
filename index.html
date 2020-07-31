@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Poppins", sans-serif;
+  transition: background-color .5s;
+  background-image: url("white.png");
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: lightgrey;
+  border-radius: 30%;
+  display: inline-block;
+}
+.boxgray {
+  background-color: lightgrey;
+  width: 300px;
+  border: 3px #7386D5;
+  padding: 30px;
+  margin: 20px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.imgt {
+   margin-left: 19px;
+}
+.bg {
+  background-color: #fff;
+
+}
+
+.gotopbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+
+  bottom: 40px;
+  right: 50px;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: black;
+  font-size: 22px;
+}
+
+.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+	<div class="imgt">
+    <img src="imgr.jpg" height="100" width="180" align="center">
+  </div>
+  
+
+<a href="#myhome"><b>Kartik's Developing Solution</b></a>
+<div class="bg">
+     <a href="#myhome" align="center">HTML</a>
+  </div>
+
+  <a href="#myhome"><span class="dot"></span> HTML-Home</a>
+	<hr>
+  <a href="#History"><span class="dot"></span> HTML-History</a>
+<hr>
+  <a href="#tags"> <span class="dot"></span> HTML-Tags</a>
+<hr>
+  <a href="#doc"> <span class="dot"></span> HTML-Creation</a>
+<hr>
+<a href="#format"><span class="dot"></span> HTML-Formatting</a>
+	<hr>
+  <a href="#list"><span class="dot"></span> HTML-List</a>
+<hr>
+  <a href="#cmt"><span class="dot"></span> HTML-Comments</a>
+<hr>
+  <a href="#anchors"><span class="dot"></span> HTML-Anchors</a>
+<hr>
+<a href="#tables"><span class="dot"></span> HTML-Tables</a>
+	<hr>
+  <a href="#imgr"><span class="dot"></span> HTML-Images</a>
+<hr>
+  <a href="#multimedia"><span class="dot"></span> HTML-Multimedia</a>
+<hr>
+  <a href="#write"><span class="dot"></span> Write Good HTML</a>
+
+<div class="bg">
+     <a href="#myhome" align="center">CSS</a>
+  </div>
+
+  <a href="#myhome"><span class="dot"></span> CSS-Home</a>
+  <hr>
+  <a href="#History"><span class="dot"></span> CSS-Rules</a>
+<hr>
+  <a href="#tags"> <span class="dot"></span> CSS-Selector</a>
+<hr>
+  <a href="#doc"> <span class="dot"></span> CSS-How To</a>
+<hr>
+<a href="#format"><span class="dot"></span> CSS-Comments</a>
+  <hr>
+  <a href="#list"><span class="dot"></span> CSS-Colors</a>
+<hr>
+  <a href="#cmt"><span class="dot"></span> CSS-Background</a>
+<hr>
+  <a href="#anchors"><span class="dot"></span> CSS-Border</a>
+<hr>
+<a href="#tables"><span class="dot"></span> CSS-Text</a>
+  <hr>
+  <a href="#imgr"><span class="dot"></span> CSS-Font</a>
+<hr>
+  <a href="#multimedia"><span class="dot"></span> CSS-Table</a>
+<hr>
+  <a href="#write"><span class="dot"></span> CSS-Padding</a>
+
+  <div class="bg">
+     <a href="#myhome" align="center">BOOTSTRAP</a>
+  </div>
+
+  <a href="#myhome"><span class="dot"></span> Bootstrap-Home</a>
+  <hr>
+  <a href="#History"><span class="dot"></span> Bootstrap-History</a>
+<hr>
+  <a href="#tags"> <span class="dot"></span> Bootstrap-Use</a>
+<hr>
+  <a href="#doc"> <span class="dot"></span> Bootstrap-B3 Vs B4</a>
+<hr>
+<a href="#format"><span class="dot"></span> Bootstrap-Container</a>
+  <hr>
+  <a href="#list"><span class="dot"></span> Bootstrap-Grid</a>
+<hr>
+  <a href="#cmt"><span class="dot"></span> CSS-Default Setting</a>
+<hr>
+ 
+
+</div>
+
+<div id="main" >
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav(); ">
+  
+  <div class="container">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+</span>
+
+  <div id="myhome" onclick="closeNav()">
+
+    <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i> </a>
+     
+  <h2 >What is HTML</h2>
+<p>
+    HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+        <br>
+
+"Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.</p>
+
+ <p>
+       HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as
+       <span><</span><span>head></span>
+       <span><</span><span>title></span>
+       <span><</span><span>body></span>
+       <span><</span><span>header></span>
+       <span><</span><span>footer></span>
+       <span><</span><span>article></span>
+       <span><</span><span>section></span>
+       <span><</span><span>p></span>
+       <span><</span><span>div></span>
+       <span><</span><span>span></span>
+       <span><</span><span>img></span>
+       <span><</span><span>aside></span>
+       <span><</span><span>audio></span>
+       <span><</span><span>canvas></span>
+       <span><</span><span>datalist></span>
+       <span><</span><span>details></span>
+       <span><</span><span>embed></span>
+       <span><</span><span>nav></span>
+       <span><</span><span>output></span>
+       <span><</span><span>progress></span>
+       <span><</span><span>video></span>
+       <span><</span><span>ul></span>
+       <span><</span><span>ol></span>
+       <span><</span><span>li></span> and many others. 
+
+An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "<" and ">".  The name of an element inside a tag is case insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the <span><</span><span>title></span> tag can be written as <span><</span><span>Title></span>, <span><</span><span>TITLE></span>, or in any other way. </p>
+<br>
+
+<h2 >A Simple HTML Document</h2> 
+
+<div class="boxgray">
+  <p>
+        <code><span><</span><span>!DOCTYPE html></span><br>
+        <span><</span><span>html lang="en"></span><br>
+        <span><</span><span>head></span><br> </code>
+        <code><span><</span><span>title></span></code> Document <code><span><</span><span>/title></span></code> <br>
+        <code>
+        <span><</span><span>/head></span><br>
+        <span><</span><span>body></span><br></code>
+        <code><span><</span><span>h1></span></code> Hello
+        <code>
+        <span><</span><span>/h1></span><br>
+        <span><</span><span>/body></span><br>
+        <span><</span><span>/html></span><br> </code>
+    </p>
+
+</div>
+
+<h2>Explanation</h2> 
+<p>
+The <code><span><</span><span>!DOCTYPE html></span></code> declaration defines that this document is an HTML5 document <br>
+The <code><span><</span><span>html></span></code> element is the root element of an HTML page <br>
+The <code><span><</span><span>head></span></code> element contains meta information about the HTML page <br>
+The <code><span><</span><span>title></span></code> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) <br>
+The <code><span><</span><span>body></span></code> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. <br>
+The <code><span><</span><span>h1></span></code> element defines a large heading <br> </p>
+
+<div class="container">
+  <div class="row">
+  <div class="col-12 col-md-8 col-lg-8 col-sm-12">
+    <br>
+    <img src="ex.png" height=80% width=80%>
+    
+  </div>    
+  </div>
+</div>
+
+<div id="History">
+<h2>History Of HTML</h2>
+<p>
+  Tim Berners-Lee, the inventor of HTML, used to work in the computer section of the CERN (European Laboratory for Particle Physics) at Geneva, Switzerland.
+CERN is an institution for researching particle physics which requires the collaboration of physicists all over the world.
+</p>
+<p>
+Tim has an idea of creating something which would enable physicists to share research information from anywhere in the world, and he came with HTML which can contain links of many documents from one document. </p> </div>
+
+
+<div id="tags">
+<h2 >HTML Tags</h2> 
+<p>
+  HTML tags are used to mark-up HTML elements <br>
+ HTML tags are surrounded by the two characters <code><</code> and <code>></code> <br>
+ The surrounding characters are called angle brackets <br>
+ HTML tags normally come in pairs like <code><span><</span><span>b></span></code> and <code><span><</span><span>/b></span></code> <br>
+ The first tag in a pair is the start tag, the second tag is the end tag <br>
+ The text between the start and end tags is the element content <br>
+ HTML tags are not case sensitive, <code><span><</span><span>b></span></code> means the same as <code><span><</span><span>B></span></code> <br>
+</p>
+
+<h2 >Tag Attribute</h2>
+<p>
+Tags can have attributes. Attributes can provide additional information about the
+HTML elements on your page. <br>
+This tag defines the body element of your HTML page: <code><span><</span><span>body></span></code>. With an added
+bgcolor attribute, you can tell the browser that the background color of your page
+should be red, like this: <code><span><</span><span>body bgcolor="red"></span></code>. <br>
+This tag defines an HTML table: <code><span><</span><span>table></span></code> With an added border attribute, you can
+tell the browser that the table should have no borders: <code><span><</span><span>table border="0"></span></code>.
+Attributes always come in name/value pairs like this: <code>name="value"</code>.<br>
+Attributes are always added to the start tag of an HTML element.
+Attribute values should always be enclosed in quotes. Double style quotes are the
+most common, but single style quotes are also allowed.<br>
+</p>
+
+<h2>Golden Rules To Remember</h2>
+<p>
+The vast majority of tags must be opened (<tag>) and closed (</tag>) with the element information such as a title or text resting between the tags.
+When using multiple tags, the tags must be closed in the order in which they were opened.
+<br>
+For example:
+<code><span><</span><span>strong></span></code>
+<code><span><</span><span>em></span></code>
+This is really important!
+<code><span><</span><span>/em></span></code>
+<code><span><</span><span>/strong></span></code>
+
+
+
+</p>
+<h2>Heading Tags</h2>
+  <p>
+Any document starts with a heading. You can use different sizes for your headings. HTML also has six levels of headings, which use the elements <code><span><</span><span>H1></span></code>, <code><span><</span><span>H2></span></code>, <code><span><</span><span>H3></span></code>, <code><span><</span><span>H4></span></code>, <code><span><</span><span>H5></span></code>, and <code><span><</span><span>H6></span></code>. While displaying any heading, browser adds one line before and one line after that heading </p>
+<h3>Example</h3>
+  <div class="boxgray">
+  <p>
+  
+  <code><span><</span><span>!DOCTYPE html></span></code> <br>
+  <code><span><</span><span>html></span></code> <br>
+  <code><span><</span><span>head></span></code> <br>
+  <code><span><</span><span>title></span></code> Heading
+  <code><span><</span><span>/title></span></code> <br>
+  <code><span><</span><span>/head></span></code> <br>
+  <code><span><</span><span>body></span></code> <br>
+  <code><span><</span><span>h1></span></code> Heading 1 <code><span><</span><span>/h1></span></code> <br>
+  <code><span><</span><span>h2></span></code> Heading 2 <code><span><</span><span>/h2></span></code> <br>
+  <code><span><</span><span>h3></span></code> Heading 3 <code><span><</span><span>/h3></span></code> <br>
+  <code><span><</span><span>h4></span></code> Heading 4 <code><span><</span><span>/h4></span></code> <br>
+  <code><span><</span><span>h5></span></code> Heading 5 <code><span><</span><span>/h5></span></code> <br>
+  <code><span><</span><span>h6></span></code> Heading 6 <code><span><</span><span>/h6></span></code> <br>
+  <code><span><</span><span>/body></span></code> <br>
+  <code><span><</span><span>/html></span></code> </p>
+  </div>
+
+  
+   <div class="container">
+  <div class="row">
+  <div class="col-12 col-md-8 col-lg-8 col-sm-12">
+    <br>
+    <img src="ex2.png" height=80% width=80%>
+    
+  </div>    
+  </div>
+</div>
+
+<h2>Line Break Tag</h2>
+<p>Whenever you use the <code><span><</span><span>br/></span></code> element, anything following it starts from the next line. This tag is an example of an empty element, where you do not need opening and closing tags, as there is nothing to go in between them.
+
+The <code><span><</span><span>br/></span></code> tag has a space between the characters br and the forward slash. If you omit this space, older browsers will have trouble rendering the line break, while if you miss the forward slash character and just use <code><span><</span><span>br></span></code> it is not valid in XHTML.</p>
+<div class="boxgray">
+  <p>
+  
+  <code><span><</span><span>!DOCTYPE html></span></code> <br>
+  <code><span><</span><span>html></span></code> <br>
+  <code><span><</span><span>head></span></code> <br>
+  <code><span><</span><span>title></span></code> Example of line break
+  <code><span><</span><span>/title></span></code> <br>
+  <code><span><</span><span>/head></span></code> <br>
+  <code><span><</span><span>body></span></code> <br>
+  <code><span><</span><span>p></span></code> Hey <code><span><</span><span>br/></span></code> <br/>
+  How are you? <code><span><</span><span>br/></span></code> <br/>
+  Thanks <code><span><</span><span>br/></span></code> <br/>
+  Shraddha <code><span><</span><span>/p></span></code> <br>
+  <code><span><</span><span>/body></span></code> <br>
+  <code><span><</span><span>/html></span></code> </p>
+  </div>
+  
+  <div class="container">
+  <div class="row">
+  <div class="col-12 col-md-8 col-lg-8 col-sm-12">
+    <br>
+    <img src="ex3.png" height=80% width=80%>
+    
+  </div>    
+  </div>
+  </div>
+
+   <h2>Horizontal Lines</h2>
+  <p>
+  Horizontal lines are used to visually break-up sections of a document. The <code><span><</span><span>/hr></span></code> tag creates a line from the current position in the document to the right margin and breaks the line accordingly.
+
+  For example, you may want to give a line between two paragraphs as in the given example below − </p>
+
+  <div class="boxgray">
+  <p>
+  
+  <code><span><</span><span>!DOCTYPE html></span></code> <br>
+  <code><span><</span><span>html></span></code> <br>
+  <code><span><</span><span>head></span></code> <br>
+  <code><span><</span><span>title></span></code> Horizontal Line Example
+  <code><span><</span><span>/title></span></code> <br>
+  <code><span><</span><span>/head></span></code> <br>
+  <code><span><</span><span>body></span></code> <br>
+  <code><span><</span><span>p></span></code> This is paragraph one and should be on top <code><span><</span><span>p/></span></code> <br/>
+  <code><span><</span><span>hr/></span></code> <br/>
+  <code><span><</span><span>p></span></code> This is paragraph one and should be on bottom <code><span><</span><span>p/></span></code> <br/>
+  
+  <code><span><</span><span>/body></span></code> <br>
+  <code><span><</span><span>/html></span></code> </p>
+  </div>
+
+  <h2>Nesting HTML Tags</h2>
+<p>
+Text may be both bold and italicised. This is done by using both the <code><span><</span><span>B></span></code>  and <code><span><</span><span>I></span></code>  tags. When doing so, it is
+important to remember not to overlap HTML tags. In other words:
+<br>
+<code><span><</span><span>B></span></code> <code><span><</span><span>I></span></code> Internet Commerce
+is great!<code><span><</span><span>/I></span></code> <code><span><</span><span>/B></span></code> <br>
+is correct, but <br>
+<code><span><</span><span>B></span></code> <code><span><</span><span>I></span></code> Internet Commerce is great!<br><code><span><</span><span>/B></span></code> <code><span><</span><span>/I></span></code>  <br>
+is wrong. </p> 
+
+<p>
+Overlapping tags is a common mistake. Although Web browsers are usually smart enough to work out what
+is meant, it can lead to problems. Furthermore, for an HTML page to be considered valid HTML, it must
+contain no overlapping tags. </p> 
+</div>
+
+<div id="doc">
+<h2>Creating HTML Text using Notepad++</h2>
+<p>
+
+This section covers the creation of an HTML page. You will need a Web browser and a text editor. Use any text editor you wish to, but the following Activity descriptions will use Notepad++. Notepad++ is a free Windows editor that also supports several programming languages. For example, you will notice that HTML keywords are highlighted in different colors <br> <br>
+
+1. Open your Web browser. This sections' goal is to create a Web document that can be opened with your
+browser.<br>
+2. Open Notepad++. It can be found by selecting Start, then All Programs, then Notepad++. <br>
+3. Type the following text into Notepad++: your name and the module number (CSC5003). Save this file
+as start.txt. <br>
+4. Now load start.txt into the browser by dragging start.txt onto your browser. <br>
+5. The browser should now display the text contained in start.txt. (If it does not, make sure that you have
+saved start.txt and that this is the file you are opening). <br>
+6. Once you have displayed start.txt, return to Notepad. Add the text "Internet Commerce", and save the
+file again. <br>
+7. Return to the Web browser and reload the document (by using either by using the Refresh or Reload
+toolbar buttons, or by selecting File/Open once again). <br>
+8. If you are able to see the new piece of text, you have successfully used Notepad to create your first Web
+page. <br> </p>
+
+<h2>Getting started with HTML</h2>
+<p>
+
+This Activity adds HTML tags to my.txt.
+1. Open your file <B>my.txt</B> in Notepad. <br>
+2. Mark up the text "Internet Commerce" so that appears in bold. Do this by placing the <code><span><</span><span>B></span></code> tag in front
+of the text, and <code><span><</span><span>/B></span></code> at the end of the text, as shown below: 
+<code><span><</span><span>B></span></code>My Webpage<code><span><</span><span>/B></span></code> <br>
+3. Save the file as <B>my.html</B>, since it contains some HTML formatting. Save the file with this new name
+(using Save As). Note that saving it as <B>my.htm</B> is also accepted. Other than the obvious, the letter "L,"
+there's not much of a difference between the two extensions. Most, if not all, web browsers and servers
+will treat a file with an HTM extension exactly as it would a file with an HTML extension, and vice
+versa. <br>
+4. Load <B>my.html</B> in the Web browser. Internet Commerce should now appear in bold. <br>
+5. Return to Notepad and add more text, some of it in bold and others in italics. (Remember <code><span><</span><span>I></span></code> is the tag
+for italics) Save the document and reload it. <br> </p>
+
+<h2>Standard HTML Document Structure Format</h2>
+<p>
+Although a number of HTML tags have been introduced that markup how text should be displayed in a browser,
+a correct HTML document must always include certain structural tags. These tags are<code><span><</span><span>HTML></span></code>,
+ <code><span><</span><span>HEAD></span></code>,
+<code><span><</span><span>BODY></span></code> and <code><span><</span><span>TITLE></span></code>. <br> <br>
+The <code><span><</span><span>HTML></span></code> tag should be placed around the document's contents; this tells the browser that the whole document
+is written in HTML. Like a person, all HTML documents have only one head and one body. All the text of the
+HTML document should be inside either the head or the body. Roughly, the <code><span><</span><span>HEAD></span></code> holds information about
+the document itself, and the <code><span><</span><span>BODY></span></code> holds the information that should be displayed.
+ The document's <code><span><</span><span>TITLE></span></code>
+is given in the <code><span><</span><span>HEAD></span></code>. 
+The title is shown at the very top of the browser (i.e. in the title bar) — not in the browser
+window itself. <br>
+The standard structure of an HTML document is: <br>
+<code><span><</span><span>HTML></span></code> <br>
+<code><span><</span><span>HEAD></span></code> <br>
+<code><span><</span><span>TITLE></span></code> Text to appear in the title bar of the browser<code><span><</span><span>/TITLE></span></code> <br>
+<code><span><</span><span>/HEAD></span></code> <br>
+<code><span><</span><span>BODY></span></code> <br>
+The text to appear in the main browser window.<br>
+<code><span><</span><span>/BODY></span></code> <br>
+<code><span><</span><span>/HTML></span></code> <br>
+</p>
+
+ <h2>Structuring your HTML document</h2>
+<p>
+In this Activity you will convert your file that contains a few HTML tags into a correctly structured HTML
+document. Open start.htm in Notepad. <br>
+1. Add the <code><span><</span><span>HTML></span></code> tag on the first line of the file (before anything else). <br>
+2. Add the <code><span><</span><span>/HTML></span></code> end tag on the last line of the file (after everything else). <br>
+3. Add the document header by adding a <code><span><</span><span>/HEAD></span></code> tag on the line underneath the <code><span><</span><span>HTML></span></code> tag and the
+<code><span><</span><span>/HEAD></span></code> tag on the line beneath that. <br>
+4. Between the opening and closing <code><span><</span><span>/HEAD></span></code> tags, add the <code><span><</span><span>TITLE></span></code> and <code><span><</span><span>/TITLE></span></code> tags. <br>
+5. Enter the text "My first Web page" between the <code><span><</span><span>TITLE></span></code> tags. <br>
+6. Underneath the <code><span><</span><span>/HEAD></span></code> tag, create the body of the document by entering the <code><span><</span><span>/BODY></span></code> tag. <br>
+7. At the bottom of the document, add the <code><span><</span><span>/BODY></span></code> tag just before the <code><span><</span><span>/HTML></span></code> tag. <br>
+8. Save the file. <br>
+</p>
+</div>
+<div id="format">
+<h2>HTML Formatting</h2> 
+<h2>The Browser As Formatter </h2>
+<p>
+As you will recall, it is the browser that actually formats the HTML document. But when it displays text, where
+does it put the line breaks? <br>
+The browser automatically determines the position of the line breaks. It tries to fit all of the text into the current
+window so that the user does not need to do any horizontal scrolling. If the browser window changes size, the
+browser reformats the document.<br>
+It also ignores extra spaces. If there are two spaces between words in the HTML file, the browser will display the
+text in exactly the same way as if there was only one. Blank lines are ignored in a similar way. The browser also
+tries to correct errors in incorrect HTML (such as HTML containing overlapping tags). When doing so, the
+browser may incorrectly interpret the HTML document, making it a wiser choice to write correct HTML.
+Sometimes it can be difficult to have the browser format things as you want. You will learn more tricks on how
+to do this as you work through the HTML units.<br> </p>
+
+<h2>Paragraphs, Line Breaks and Preformatting</h2>
+<p>
+The tag <code><span><</span><span>BR></span></code> is used to start a new line. <code><span><</span><span>BR></span></code>is a standalone tag, that means there is no closing <code><span><</span><span>/BR></span></code>tag. Note
+that <code><span><</span><span>BR></span></code> does not place a line space between the two lines. To do that you need to use the <code><span><</span><span>P></span></code>paragraph tag.
+Do not forget to add the end tag <code><span><</span><span>/P></span></code> although most browsers will display HTML correctly even if you forget the
+end tag. The tag <code><span><</span><span>pre></span></code> defines preformatted text. The text inside a <code><span><</span><span>pre></span></code> element is displayed in a fixed-width
+font (usually Courier), and it preserves both spaces and line breaks.
+ </p>
+</div>
+<div id="list">
+
+<h2>Lists</h2>
+<p>
+<UL>
+<LI>Apples</LI>
+<LI>Oranges</LI>
+<LI>Bananas</LI>
+</UL>
+
+<OL type = "1">
+<LI>Apples</LI>
+<LI>Oranges</LI>
+<LI>Bananas</LI>
+</OL>
+<p>
+The two examples above are lists. The list on the left uses bullets to mark the list elements, and is known as an
+unordered list. The list on the right uses numbers to mark the list elements and is known as an ordered list.
+HTML lists consist of a list tag and list element tags.
+In an unordered list, the list tag is <code><span><</span><span>UL></span></code> and the list element tag is <code><span><</span><span>LI></span></code>. Note that although the list element end
+tag <code><span><</span><span>/LI></span></code> was optional in previous versions of HTML, it no longer is. The list end tag <code><span><</span><span>/UL></span></code> is also not optional.
+To create an unordered list as in the above example, use the following HTML. </p>
+<div class="boxgray">
+<code><span><</span><span>UL></span></code> <br>
+<code><span><</span><span>LI></span></code>Apples<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>LI></span></code>Oranges<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>LI></span></code>Bananas<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>/UL></span></code>
+</div>
+Note that it is useful to indent the <code><span><</span><span>LI></span></code> tags on the page to keep track of the level of indentation. To add more list
+elements, add extra list element tags <code><span><</span><span>LI></span></code> <code><span><</span><span>/LI></span></code> containing the elements within the <code><span><</span><span>/UL></span></code> tags. <br> <br> 
+
+A style attribute can be added to an unordered list, to define the style of the marker:
+<br>
+
+<div class="container">
+  <div class="row">
+  <div class="col-12 col-md-8 col-lg-8 col-sm-12">
+    <br>
+    <img src="table.png" height=80% width=80% align="left">
+    
+  </div>    
+  </div>
+  </div>
+
+</p>
+<p>
+For example the code below would append square bullets to the list. <br>
+<div class="boxgray">
+<code><span><</span><span>UL style = "list-style-type:square"></span></code> <br>
+<code><span><</span><span>LI></span></code>Apples<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>LI></span></code>Oranges<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>LI></span></code>Bananas<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>/UL></span></code>
+</div>
+<p>
+Ordered lists are specified almost exactly the same as unordered lists, only the <code><span><</span><span>OL></span></code> tag is used instead of the
+<code><span><</span><span>/UL></span></code> tag. A type attribute can be added to an ordered list, to define the type of the marker: <br>
+
+<div class="container">
+  <div class="row">
+  <div class="col-12 col-md-8 col-lg-8 col-sm-12">
+    <br>
+    <img src="table1.png" height=80% width=80% align="left">
+    
+  </div>    
+  </div>
+  </div>
+<br>
+<p>
+For example, <br>
+<code><span><</span><span>OL type = "i"></span></code> <br>
+<code><span><</span><span>LI></span></code>Apples<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>LI></span></code>Oranges<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>LI></span></code>Bananas<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>/OL></span></code> <br>
+The description list, is different: it has neither bullets nor numbers. The description list tag is <code><span><</span><span>DL></span></code> and the list
+elements consist of a term and its definition. The term is marked by <code><span><</span><span>DT></span></code> tags and the definition by <code><span><</span><span>/DD></span></code> tags. <br>
+An example use definition lists is the glossary definition that appears below. <br>
+<code><span><</span><span>/DL></span></code> <br>
+<code><span><</span><span>/DT></span></code>HTML <code><span><</span><span>/DT></span></code> <br>
+<code><span><</span><span>DD></span></code> Hypertext Markup Language; the format of Web documents <code><span><</span><span>/DD></span></code> <br>
+<code><span><</span><span>/DL></span></code> <br> <br>
+Lists can be nested (lists inside lists). For example, <br>
+
+
+<code><span><</span><span>OL type = "i"></span></code> <br>
+<code><span><</span><span>LI></span></code>Apples<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>LI></span></code>Oranges<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>LI></span></code>Bananas<code><span><</span><span>/LI></span></code> <br>
+<code><span><</span><span>ul></span></code><br>
+<code><span><</span><span>li></span></code>small bananas<code><span><</span><span>/li></span></code> <br>
+<code><span><</span><span>li></span></code>big bananas<code><span><</span><span>/li></span></code> <br> 
+<code><span><</span><span>/ul></span></code><br> 
+<code><span><</span><span>/OL></span></code><br>
+</p>
+</div>
+
+<div id="cmt">
+
+<h2>HTML Comments </h2>
+<p>
+Notes may be left in an HTML page to, for example, explain how or why something was done; these notes are
+often useful for other developers who will be working on the HTML document. These notes, called comments,
+are not displayed by the Web browser, and can only be seen in the HTML source file itself. Web developers make
+frequent use of HTML comments, and they can found in many Web pages (using the 'View Page Source' menu
+option). <br>
+An HTML comment is given as:  <code><span><</span><span>!--- text in the comment ---></span></code>  . </p>
+</div>
+
+<div id="anchors">
+
+<h2>Anchors</h2> 
+<p>
+
+To link to another file use the <code><span><</span><span>A HREF="URL"></span></code> link <code><span><</span><span>/A></span></code>tag.
+The term URL is the location of the file to be linked to. It could be on a hard or floppy disk — as in
+a:\filename.html or c:\my documents\filename.html </p>
+
+
+<div class="boxgray">
+
+<p>
+<code><span><</span><span>!DOCTYPE html></span></code> <br>
+<code><span><</span><span>html></span></code> <br>
+<code><span><</span><span>body></span></code> <br>
+<code><span><</span><span>h1></span></code>HTML Links <code><span><</span><span>/h1></span></code><br>
+<code><span><</span><span>a href="https://www.google.com/"></span></code> Visit google.com! <code><span><</span><span>/a></span></code> <br>
+<code><span><</span><span>/body></span></code> <br>
+<code><span><</span><span>/html></span></code> <br> </p>
+</div>
+</div>
+
+
+<div id="tables">
+<h2>HTML Tables </h2>
+<p> HTML tables allow web developers to arrange data into rows and columns.</p>
+<p>
+The <code><span><</span><span>table></span></code> tag defines an HTML table. <br>
+
+Each table row is defined with a <code><span><</span><span>tr></span></code> tag. Each table header is defined with a <code><span><</span><span>th></span></code> tag. Each table data/cell is defined with a <code><span><</span><span>td></span></code> tag. <br>
+
+By default, the text in <code><span><</span><span>th></span></code> elements are bold and centered. <br>
+
+By default, the text in <code><span><</span><span>td></span></code> elements are regular and left-aligned. <br> </p>
+
+<div class="boxgray"> 
+  <p>
+<code><span><</span><span>!DOCTYPE html></span></code> <br>
+<code><span><</span><span>html></span></code> <br>
+<code><span><</span><span>body></span></code> <br>
+<code><span><</span><span>table style="width:100%"></span></code> <br>
+<code><span><</span><span>tr></span></code> <br>
+<code><span><</span><span>th></span></code> Firstname <code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>th></span></code> Lastname<code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>th></span></code> Age <code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>/tr></span></code> <br>
+<code><span><</span><span>tr></span></code> <br>
+<code><span><</span><span>th></span></code> A <code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>th></span></code> B<code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>th></span></code> 50 <code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>/tr></span></code> <br>
+<code><span><</span><span>tr></span></code> <br>
+<code><span><</span><span>th></span></code> C <code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>th></span></code> D<code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>th></span></code> 40 <code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>/tr></span></code> <br>
+<code><span><</span><span>tr></span></code> <br>
+<code><span><</span><span>th></span></code> F <code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>th></span></code> G<code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>th></span></code> 80 <code><span><</span><span>/th></span></code> <br>
+<code><span><</span><span>/tr></span></code> <br>
+</p>
+</div>
+
+<div class="container">
+  <div class="row">
+  <div class="col-12 col-md-8 col-lg-8 col-sm-12">
+    <br>
+    <img src="table2.png" height=80% width=80% align="left">
+    
+  </div>    
+  </div>
+  </div>
+<br>
+</div>
+
+<div id="imgr">
+<h2> HTML Images</h2>
+<p>  The HTML <code><span><</span><span>img></span></code> tag is used to embed an image in a web page. <br>
+
+Images are not technically inserted into a web page; images are linked to web pages. The <code><span><</span><span>img></span></code> tag creates a holding space for the referenced image. <br>
+
+The <code><span><</span><span>img></span></code> tag is empty, it contains attributes only, and does not have a closing tag. <br>
+
+The <code><span><</span><span>img></span></code> tag has two required attributes: <br>
+
+src - Specifies the path to the image <br>
+alt - Specifies an alternate text for the image <br>
+
+Syntax: <br>
+<code><span><</span><span>img src="img_chania.jpg" alt="Flowers in Chania"></span></code> 
+</p>
+</div>
+
+<div id="multimedia">
+
+<h2> Multimedia </h2>
+
+<h3> Graphics </h3>
+<p>
+In-line images give the Web much of its visual appeal. They can also cause people using a slow Internet connection
+to not visit the site; so unless large in-line images are vital, they should either be avoided or alternate pages not
+using them provided. Small icons, however, have almost negligible transfer cost and can greatly enhance the
+appearance of your pages. <br>
+Use GIF or JPG files for graphics as appropriate:<br>
+• Scanned images look better as JPG files. The JPG file format uses variable compression to make the
+file size smaller, but too much compression causes the picture to lose detail. As a guideline, use a
+JPG compression level between 60 and 75 percent. JPG is always 24 bit colour or 8 bit grey scale
+(such as in a black and white photograph). <br>
+• GIF is useful for special effects such as transparent artwork (background transparency) and
+animation. It is 8 bit. <br>
+Another format called PNG combines the features JPG and GIF. 
+<br>The <code><span><</span><span>IMG></span></code> tag is used to embed an image into a Web document: <br>
+<code><span><</span><span>img src="url" alt="alternate text"></span></code>
+The URL is the location of the image file. The ALT attribute specifies text to be displayed if the browser does
+not display the image. <br>
+In-line images are often placed inside anchors. The HTML code to create an image as a hyperlink is: 
+<code><span><</span><span>a href="url"></span></code><code><span><</span><span>img src="url" alt="alternate text"></span></code><code><span><</span><span>/a></span></code> <br>
+When an in-line image is used as a hyperlink, a border is placed around the image. This can be removed using
+BORDER=0.  Similarly, a border, of any size, can be placed around a graphic using BORDER=x, where x is the
+width of the border in pixels.  </p>
+
+<h3> Objects </h3>
+<p>
+This section described how to incorporate other objects objects - such as multimedia and Java applets - into your
+Web pages: <br>
+The <code><span><</span><span>EMBED SRC="URL"></span></code>tag is used to embed media such as background sound. For
+example,
+<code><span><</span><span>EMBED SRC="music.avi" WIDTH=320 HEIGHT=200 autostart=true
+loop=3></span></code> inserts an AVI movie object into a page, scales it to 320 x 200, starts playing
+the video, and loops it three times. <br>
+</p>
+
+<h3>ImageMap</h3>
+<p>
+ •  An imagemap is a graphic that has certain areas on it defined as hyperlinks. These areas can do whatever normal
+HTML links do — email, ftp, gopher, etc. Two very popular uses for image maps are navigation bars and
+thumbnail sheets. <br>
+• There are two types of imagemaps: client-side imagemaps and server-side imagemaps.A server-side imagemap
+requires the imagemap information to be saved within a separate file stored on a server and accessed through a
+CGI script. This type of imagemap is far more complicated to set up, and is not supported by all servers. Serverside imagemap behaviour varies from system to system, even among different systems using the same server. A
+server-side imagemap shows mouse co-ordinates at the bottom of the screen. <br>
+• A client-side imagemap (CSIM) requires the imagemap information to be stored within the HTML document. A
+client-side image map shows the actual URL in the status bar message at the bottom of the browser window.
+Client-side image maps store the hyperlink information in the HTML document, not in a separate map file as do
+server-side image maps. <br>
+When the user clicks a hotspot in the image, the associated URL is sent directly to the server. This makes clientside image maps faster than server-side image maps because the server does not need to interpret where the user
+clicked. Client-side image maps are supported by all modern browsers. <br>
+</p>
+
+</div>
+
+<div id="write">
+<h2> Writing A Good HTML </h2>
+<p>
+
+This final section is concerned with the production of good HTML, as well as with the importance of testing
+your Web documents before going 'live'. <br>
+There are a number of online validation services that check the validity of a Web page. The World Wide Web
+Consortium's HTML Validator , for example, checks HTML documents for compliance with W3C HTML
+Recommendations and other HTML standards. <br>
+If there are mistakes in the HTML document, the validator will list the problems — but if it is correct, it
+provides a message similar to: <br>
+<code>
+Valid HTML 4.0 <br> 
+No errors found! <br> 
+Congratulations, this document validates as HTML 4.0 Transitional! <br> </code>
+Certain HTML editors or authoring tools have built-in HTML checkers or validators; these are sometimes useful,
+but are not always accurate. Sometimes they notice 'errors' you have intentionally entered, but mostly they can be
+of great help, particularly when producing complex Web pages. The more sophisticated tools are able to adjust to
+the level of the target browser, as well as fine tune options such as listing missing ALT attributes inside IMG tags. </p>
+</div>
+
+
+<h2>Other Resources</h2>
+<iframe width="500" height="315" src="https://www.youtube.com/embed/-G7bJVAIiEI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+
+
+
+<h2>What is CSS</h2>
+<p>
+• CSS stands for Cascading Style Sheets <br>
+• CSS describes how HTML elements are to be displayed on screen, paper, or in other media <br>
+• CSS saves a lot of work. It can control the layout of multiple web pages all at once <br>
+• External stylesheets are stored in CSS files <br>
+  </p>
+
+<h2>Driving problem behind CSS</h2>
+<p>
+What font type and size does <code><span><</span><span>H1></span></code> Introduction<code><span><</span><span>/H1></span></code>  generate?
+Answer: Some default from the browser (HTML tells what browser how) <br>
+Early HTML - Override defaults with attributes
+<code><span><</span><span>table border="2" bordercolor="black"></span></code> <br>
+Style sheets were added to address this:
+Specify style to use rather than browser default
+Not have to code styling on every element
+</p>
+
+<h2>Key concept: Separate style from content</h2>
+<p>
+Content (what to display) is in HTML files <br>
+Formatting information (how to display it) is in separate style sheets (.css files). <br>
+Use an element attribute named class to link (e.g. <code><span><</span><span>span class="test"></span></code>) <br>
+Result: define style information once, use in many places
+Consider can you make all the text in the app slightly bigger?
+Or purple is our new company color. <br>
+<b>DRY principle: Don't Repeat Yourself</b> <br>
+</p>
+
+<h2>CSS Rules</h2>
+<p>
+A CSS comprises of style rules that are interpreted by the browser and then applied to the corresponding elements in your document. A style rule is made of three parts − <br>
+
+• Selector − A selector is an HTML tag at which a style will be applied. This could be any tag like <code><span><</span><span>H1></span></code> or <code><span><</span><span>table></span></code> etc. <br>
+
+• Property − A property is a type of attribute of HTML tag. Put simply, all the HTML attributes are converted into CSS properties. They could be color, border etc. <br>
+
+• Value − Values are assigned to properties. For example, color property can have value either red or #F1F1F1 etc.</p>
+
+<h2> CSS Selector</h2>
+<p>
+<b>• The Type Selectors</b> <br><br>
+This is the same selector we have seen above. Again, one more example to give a color to all level 1 headings − <br>
+<div class="boxgray">
+<p>
+h1 {
+   color: #36CFFF; 
+}
+</p>
+</p>
+</div>
+<b>• The Universal Selectors</b> <br>
+<p>
+Rather than selecting elements of a specific type, the universal selector quite simply matches the name of any element type − </p>
+<div class="boxgray">
+<p>
+* { 
+   color: #000000; 
+}
+</p>
+</div>
+<p>
+This rule renders the content of every element in our document in black. <br><br>
+
+<b>• The Descendant Selectors</b> <br>
+Suppose you want to apply a style rule to a particular element only when it lies inside a particular element. As given in the following example, style rule will apply to <code><span><</span><span>em></span></code> element only when it lies inside <code><span><</span><span>ul></span></code>  tag.</p>
+<div class="boxgray">
+<p>
+ul em {
+   color: #000000; 
+}
+</p>
+</div>
+<p>
+<b>• The Class Selectors </b><br><br>
+You can define style rules based on the class attribute of the elements. All the elements having that class will be formatted according to the defined rule. </p> 
+<div class="boxgray">
+<p>
+.black {
+   color: #000000; 
+}
+</p>
+</div>
+<p>
+This rule renders the content in black for every element with class attribute set to black in our document. You can make it a bit more particular. For example − </p>
+<div class="boxgray">
+<p>
+h1.black {
+   color: #000000; 
+}
+</p>
+</div>
+<p>
+This rule renders the content in black for only <code><span><</span><span>h1></span></code> elements with class attribute set to black. <br>
+
+You can apply more than one class selectors to given element. Consider the following example −  </p>
+
+<div class="boxgray">
+<p>
+  <code><span><</span><span>p class = "center bold"></span></code>
+
+   This para will be styled by the classes center and bold.
+<code><span><</span><span>/p></span></code>
+</p>
+</div>
+<b>• The ID Selectors</b> <br>
+<p>
+You can define style rules based on the id attribute of the elements. All the elements having that id will be formatted according to the defined rule. </p><br>
+<div class="boxgray">
+<p>
+#black {
+   color: #000000; 
+}
+</p>
+</div>
+<p>
+This rule renders the content in black for every element with id attribute set to black in our document. You can make it a bit more particular. For example −</p> 
+<div class="boxgray">
+<p>
+h1#black {
+   color: #000000; 
+}
+</p>
+</div>
+<p>
+This rule renders the content in black for only  <code><span><</span><span>h1></span></code> elements with id attribute set to black.<br>
+
+The true power of id selectors is when they are used as the foundation for descendant selectors, For example − </p>
+<div class="boxgray">
+<p>
+#black h2 {
+   color: #000000; 
+}
+</p>
+</div>
+
+<p>
+In this example all level 2 headings will be displayed in black color when those headings will lie with in tags having id attribute set to black.</p> <br>
+
+<b>• The Child Selectors </b><br><br>
+<p>
+You have seen the descendant selectors. There is one more type of selector, which is very similar to descendants but have different functionality. Consider the following example −</p>
+<div class="boxgray">
+<p>
+body > p {
+   color: #000000; 
+}
+</p>
+</div>
+
+<p>
+This rule will render all the paragraphs in black if they are direct child of  <code><span><</span><span>body></span></code> element. Other paragraphs put inside other elements like  <code><span><</span><span>div></span></code> or  <code><span><</span><span>td></span></code> would not have any effect of this rule. </p>
+<br> 
+<b>• The Attribute Selectors </b><br>
+<p>
+You can also apply styles to HTML elements with particular attributes. The style rule below will match all the input elements having a type attribute with a value of text − </p>
+<div class="boxgray">
+<p>
+input[type = "text"] {
+   color: #000000; 
+}
+</p>
+</div>
+<br>
+<h2>How To Add CSS</h2>
+
+<p>
+When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet. <br>
+
+<b>Three Ways to Insert CSS </b><br>
+There are three ways of inserting a style sheet: <br>
+
+• External CSS <br>
+• Internal CSS <br>
+• Inline CSS <br>
+
+<h3>External CSS</h3> 
+<p>
+
+With an external style sheet, you can change the look of an entire website by changing just one file! <br>
+
+Each HTML page must include a reference to the external style sheet file inside the <code><span><</span><span>link></span></code> element, inside the head section. </p>
+
+<div class="boxgray">
+  <p>
+  
+  <code><span><</span><span>!DOCTYPE html></span></code> <br>
+  <code><span><</span><span>html></span></code> <br>
+  <code><span><</span><span>head></span></code> <br>
+  <code><span><</span><span>title></span></code> <br>
+  <code><span><</span><span>link rel="stylesheet" type="text/css" href="style.css"></span></code> <br>
+  <code><span><</span><span>/title></span></code> <br>
+  <code><span><</span><span>/head></span></code> <br>
+  <code><span><</span><span>body></span></code> <br>
+  <code><span><</span><span>p></span></code> This is paragraph <code><span><</span><span>/p></span></code> <br/>
+  <code><span><</span><span>/body></span></code> <br>
+  <code><span><</span><span>/html></span></code> </p>
+  </div>
+
+<p>
+An external style sheet can be written in any text editor, and must be saved with a .css extension. <br>
+
+The external .css file should not contain any HTML tags. <br>
+
+Here is how the <b>"style.css"</b> file looks like: </p>
+
+<div class="boxgray">
+<p>
+body { <br> 
+  background-color: lightblue; <br>
+} <br>
+
+h1 { <br>
+  color: navy; <br>
+  margin-left: 20px; <br>
+}</p>
+</div>
+
+<h2>Internal CSS </h2>
+<p>
+An internal style sheet may be used if one single HTML page has a unique style.
+
+The internal style is defined inside the <code><span><</span><span>style></span></code> element, inside the head section.
+
+</p>
+
+<div class="boxgray">
+  <p>
+  <code><span><</span><span>!DOCTYPE html></span></code> <br>
+<code><span><</span><span> html></span></code> <br>
+<code><span><</span><span>head></span></code> <br>
+<code><span><</span><span>style></span></code> <br>
+body { <br>
+  background-color: linen; <br>
+} <br>
+
+h1 { <br>
+  color: maroon; <br>
+  margin-left: 40px; <br>
+} <br>
+<code><span><</span><span>/style></span></code> <br>
+<code><span><</span><span>/head></span></code> <br>
+
+<code><span><</span><span>body></span></code> <br>
+
+<code><span><</span><span>h1></span></code>This is a heading<code><span><</span><span>/h1></span></code> <br>
+<code><span><</span><span>/body></span></code> <br>
+
+<code><span><</span><span>/html></span></code>  <br>
+</p>
+  
+</div>
+
+<h2>Inline CSS</h2>
+<p>
+An inline style may be used to apply a unique style for a single element. <br>
+
+To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property. </p>
+
+<div class="boxgray">
+  <p>
+   <code><span><</span><span>!DOCTYPE html></span></code> <br>
+<code><span><</span><span> html></span></code> <br>
+<code><span><</span><span>head></span></code> <br>
+<code><span><</span><span>h1 style="color:blue;text-align:center;"></span></code>  This is a heading <code><span><</span><span>/h1></span></code> <br>
+
+<code><span><</span><span>p style="color:red;"></span></code>This is a paragraph. <code><span><</span><span>/p></span></code> <br>
+
+
+<code><span><</span><span>/body></span></code> <br>
+
+<code><span><</span><span>/html></span></code>  <br>
+  </p>
+</div>
+
+<h2>CSS Comments</h2>
+<p>
+Comments are used to explain the code, and may help when you edit the source code at a later date. <br>
+
+Comments are ignored by browsers. <br>
+
+A CSS comment is placed inside the <code><span><</span><span>style></span></code> element, and starts with /* and ends with */:
+</p>
+<div class="boxgray">
+  <p>
+  /* This is a single-line comment */ <br>
+p { <br>
+  color: red; <br>
+} <br>
+  </p>
+</div>
+
+<h2> CSS Colors</h2>
+<p>
+CSS uses color values to specify a color. Typically, these are used to set a color either for the foreground of an element (i.e., its text) or else for the background of the element. They can also be used to affect the color of borders and other decorative effects.
+
+You can specify your color values in various formats. Following table lists all the possible formats −
+</p>
+   
+<table>
+  <tr>
+    <th>Format</th>
+    <th>Syntax</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>Hex Code</td>
+    <td>#RRGGBB</td>
+    <td>p{color:#FF0000;}</td>
+  </tr>
+  <tr>
+    <td>Short Hex Code</td>
+    <td>#RGB</td>
+    <td>p{color:#6A7;}</td>
+  </tr>
+  <tr>
+    <td>RGB</td>
+    <td>% rgb(rrr%,ggg%,bbb%)</td>
+    <td>p{color:rgb(50%,50%,50%);}</td>
+  </tr>
+  <tr>
+    <td>RGB Absolute</td>
+    <td>rgb(rrr,ggg,bbb)</td>
+    <td>p{color:rgb(0,0,255);}</td>
+  </tr>
+  <tr>
+    <td>keyword</td>
+    <td>aqua, black, etc.</td>
+    <td>p{color:teal;}</td>
+  </tr>
+</table>
+
+<h3>CSS Colors - Hex Codes</h3>
+<p>
+A hexadecimal is a 6 digit representation of a color. The first two digits(RR) represent a red value, the next two are a green value(GG), and the last are the blue value(BB). <br>
+
+A hexadecimal value can be taken from any graphics software like Adobe Photoshop, Jasc Paintshop Pro, or even using Advanced Paint Brush. <br>
+
+Each hexadecimal code will be preceded by a pound or hash sign '#'. Following are the examples to use Hexadecimal notation. <br>
+</p>
+
+<h3>CSS Colors - Short Hex Codes</h3>
+<p>
+This is a shorter form of the six-digit notation. In this format, each digit is replicated to arrive at an equivalent six-digit value. For example: #6A7 becomes #66AA77. <br>
+
+A hexadecimal value can be taken from any graphics software like Adobe Photoshop, Jasc Paintshop Pro, or even using Advanced Paint Brush. <br>
+
+Each hexadecimal code will be preceded by a pound or hash sign '#'. Following are the examples to use Hexadecimal notation. <br>
+</p>
+
+<h3>CSS Colors - RGB Values</h3>
+<p>
+This color value is specified using the rgb( ) property. This property takes three values, one each for red, green, and blue. The value can be an integer between 0 and 255 or a percentage. <br>
+
+NOTE − All the browsers does not support rgb() property of color so it is recommended not to use it. <br>
+
+Following is the example to show few colors using RGB values. <br>
+</p>
+
+<h3>Building Color Codes</h3>
+<p>
+You can build millions of color codes using our Color Code Builder. Check our HTML Color Code Builder. To use this tool, you would need a Java Enabled Browser. </p>
+
+<h3>Browser Safe Colors </h3>
+<p>
+Here is the list of 216 colors which are supposed to be most safe and computer independent colors. These colors vary from hexa code 000000 to FFFFFF. These colors are safe to use because they ensure that all computers would display the colors correctly when running a 256 color palette. </p>
+
+<h2>CSS Background</h2>
+<p>
+• The background-color property is used to set the background color of an element. <br>
+
+• The background-image property is used to set the background image of an element. <br>
+
+• The background-repeat property is used to control the repetition of an image in the background. <br>
+
+• The background-position property is used to control the position of an image in the background. <br>
+
+• The background-attachment property is used to control the scrolling of an image in the background. <br>
+
+• The background property is used as a shorthand to specify a number of other background properties. <br>
+</p>
+
+<h2> CSS Borders </h2>
+<p>
+The border-style property specifies what kind of border to display. <br>
+
+The following values are allowed: <br>
+
+• dotted - Defines a dotted border <br>
+• dashed - Defines a dashed border <br>
+• solid - Defines a solid border <br>
+• double - Defines a double border <br>
+• groove - Defines a 3D grooved border. The effect depends on the border-color value <br>
+• ridge - Defines a 3D ridged border. The effect depends on the border-color value <br>
+• inset - Defines a 3D inset border. The effect depends on the border-color value <br>
+• outset - Defines a 3D outset border. The effect depends on the border-color value <br>
+• none - Defines no border <br>
+• hidden - Defines a hidden border <br>
+
+</p>
+
+<p class="dotted">dotted border.</p>
+<p class="dashed"> dashed border.</p>
+<p class="solid"> solid border.</p>
+<p class="double"> double border.</p>
+<p class="groove"> groove border.</p>
+<p class="ridge"> ridge border.</p>
+<p class="inset"> inset border.</p>
+<p class="outset"> outset border.</p>
+<p class="none">No border.</p>
+<p class="hidden"> hidden border.</p>
+<p class="mix"> mixed border.</p>
+
+<h2> CSS Text </h2>
+<p>
+The <b>color</b> property is used to set the color of a text. <br>
+
+The <b>direction</b> property is used to set the text direction. <br>
+
+The  <b>letter-spacing property</b> is used to add or subtract space between the letters that make up a word. <br>
+
+The  <b>word-spacing property</b> is used to add or subtract space between the words of a sentence. <br>
+
+The <b>text-indent property</b> is used to indent the text of a paragraph. <br>
+
+The <b>text-align property</b> is used to align the text of a document. <br>
+
+The <b>text-decoration property</b> is used to underline, overline, and strikethrough text. <br>
+
+The <b>text-transform property</b> is used to capitalize text or convert text to uppercase or lowercase letters. <br>
+
+The <b>white-space property</b> is used to control the flow and formatting of text. <br>
+
+The <b>text-shadow property</b> is used to set the text shadow around a text. <br>
+</p>
+
+<h2>CSS Fonts</h2>
+<p>
+
+The <b>font-family</b> property is used to change the face of a font. <br>
+
+The <b>font-style</b> property is used to make a font italic or oblique. <br>
+
+The <b>font-variant</b> property is used to create a small-caps effect. <br>
+
+The <b>font-weight</b> property is used to increase or decrease how bold or light a font appears. <br>
+
+The <b>font-size</b> property is used to increase or decrease the size of a font. <br>
+
+The <b>font property</b> is used as shorthand to specify a number of other font properties. <br> </p>
+
+
+<div class="boxgray">
+  <p>
+.serif { <br>
+  font-family: "Times New Roman", Times, serif; <br>
+} <br>
+</p>
+</div>
+<p class="serif">This is a paragraph, shown in the Times New Roman font.</p>
+<div class="boxgray">
+  <p>
+.sansserif { <br>
+  font-family: Arial, Helvetica, sans-serif; <br>
+} <br>
+</p>
+</div>
+
+<p class="sansserif">This is a paragraph, shown in the Arial font.</p>
+
+<div class="boxgray">
+  <p>
+.monospace { <br>
+  font-family: "Lucida Console", Courier, monospace; <br>
+} <br>
+</p>
+</div>
+
+
+<p class="monospace">This is a paragraph, shown in the Lucida Console font.</p>
+
+<h2> CSS Tables</h2>
+<p>
+The border-collapse specifies whether the browser should control the appearance of the adjacent borders that touch each other or whether each cell should maintain its style.<br>
+
+The border-spacing specifies the width that should appear between table cells. <br>
+
+The caption-side captions are presented in the <code><span><</span><span>caption></span></code>  element. By default, these are rendered above the table in the document. You use the caption-side property to control the placement of the table caption.<br>
+
+The empty-cells specifies whether the border should be shown if a cell is empty.<br>
+
+The table-layout allows browsers to speed up layout of a table by using the first width properties it comes across for the rest of a column rather than having to load the whole table before rendering it. <br>
+</p>
+
+<h3> Table border </h3>
+<p>
+To specify table borders in CSS, use the border property. <br>
+
+The example below specifies a black border for <code><span><</span><span>table></span></code>, <code><span><</span><span>th></span></code>, and <code><span><</span><span>td></span></code> elements: <br>
+</p>
+
+<div class="boxgray">
+  <p>
+  table, th, td {
+  border: 1px solid black;
+} </p>
+</div>
+
+<h3>Table Width and Height</h3>
+<p>
+Width and height of a table are defined by the width and height properties.<br>
+
+The example below sets the width of the table to 100%, and the height of the <code><span><</span><span>th></span></code> elements to 50px: </p>
+
+
+<div class="boxgray">
+  <p>
+  table { <br>
+  width: 100%; <br>
+} <br>
+
+th { <br>
+  height: 50px; <br>
+} </p>
+</div>
+
+<h2>CSS Padding</h2>
+<p>
+The padding property allows you to specify how much space should appear between the content of an element and its border −
+<br>
+The value of this attribute should be either a length, a percentage, or the word inherit. If the value is inherit, it will have the same padding as its parent element. If a percentage is used, the percentage is of the containing box.<br>
+
+The following CSS properties can be used to control lists. You can also set different values for the padding on each side of the box using the following properties −<br>
+
+The padding-bottom specifies the bottom padding of an element.<br>
+
+The padding-top specifies the top padding of an element.<br>
+
+The padding-left specifies the left padding of an element.<br>
+
+The padding-right specifies the right padding of an element.<br>
+
+The padding serves as shorthand for the preceding properties.<br>
+</p>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1Rs2ND1ryYc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+
+<h2>BOOTSTRAP</h2>
+<h2>What is Bootstrap 4?</h2>
+<p>
+Bootstrap 4 is a powerful and popular mobile first front-end framework for building responsive mobile first sites on the web. It is a latest version of Bootstrap, which uses HTML, CSS and JavaScript. </p>
+
+<h2>History</h2>
+<p>
+The last stable release of Bootstrap v3.3.7 was in July 2016 and in August 2017, Bootstrap 4.0.0 beta version released.
+</p>
+
+<h2>Why to use Bootstrap?</h2>
+<p>
+•It contains mobile first styles throughout the entire library, instead of using them in the separate files.<br>
+
+•With just the knowledge of HTML and CSS anyone can get started with Bootstrap. Also the Bootstrap official site has a good documentation.<br>
+
+•It is supported by all popular browsers and its responsive CSS adjusts to Desktops, Tablets and Mobiles. <br>
+
+•Provides a clean and uniform solution for building an interface for developers. <br>
+
+•It contains beautiful and functional built-in components which are easy to customize. <br>
+
+•It is an open source and provides web based customization. <br>
+</p>
+
+<h2>Bootstrap 3 v/s Bootstrap 4</h2>
+<p>
+Bootstrap 4 is a latest version of Bootstrap 3, who's source CSS files are converted into SCSS. It uses the flex modal for grid system and supports all the latest browsers. However, it supports Internet Explorer 9+ and iOS 7+ and dropped support for IE 8 and lesser versions, iOS 6 and lesser versions. <p>
+
+<h2>Bootstrap Container</h2>
+<p>
+Bootstrap 4 uses container classes to wrap the page's contents. It contains two container classes −
+
+.container − It represents a fixed width container.
+
+.container-fluid − It represents a full width container. <br>
+<b>Container</b>
+<br>
+The .container class is used to wrap the page content with fixed width and content can be placed in the center easily by using the .container class as shown below.
+<br>
+<code><span><</span><span>div class = "container"></span></code> <br>
+   ...<br>
+<code><span><</span><span>/div></span></code> <br>
+
+<h2> Bootstrap Grid Classes </h2>
+<p>
+Grid Classes
+The Bootstrap 4 grid system has five classes:
+
+.col- (extra small devices - screen width less than 576px) <br>
+.col-sm- (small devices - screen width equal to or greater than 576px) <br>
+.col-md- (medium devices - screen width equal to or greater than 768px) <br>
+.col-lg- (large devices - screen width equal to or greater than 992px) <br>
+.col-xl- (xlarge devices - screen width equal to or greater than 1200px) <br>
+The classes above can be combined to create more dynamic and flexible layouts. <br>
+<br>
+Tip: Each class scales up, so if you wish to set the same widths for sm and md, you only need to specify sm.
+
+</p>
+
+<h2>Bootstrap 4 Default Settings</h2>
+<p>
+Bootstrap 4 uses a default font-size of 16px, and its line-height is 1.5. <br>
+
+The default font-family is "Helvetica Neue", Helvetica, Arial, sans-serif. <br>
+
+In addition, all <code><span><</span><span>/p></span></code> elements have margin-top: 0 and margin-bottom: 1rem (16px by default). <br>
+
+<code><span><</span><span>h1</span></code> - <code><span><</span><span>h6></span></code>
+Bootstrap 4 styles HTML headings (<code><span><</span><span>h1</span></code>  to <code><span><</span><span>h6></span></code>)  with a bolder font-weight and an increased font-size: <br>
+</p>
+
+
+<div class="container">
+  <h1>h1 Bootstrap heading (2.5rem = 40px)</h1>
+  <h2>h2 Bootstrap heading (2rem = 32px)</h2>
+  <h3>h3 Bootstrap heading (1.75rem = 28px)</h3>
+  <h4>h4 Bootstrap heading (1.5rem = 24px)</h4>
+  <h5>h5 Bootstrap heading (1.25rem = 20px)</h5>
+  <h6>h6 Bootstrap heading (1rem = 16px)</h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+  
+}
+
+
+ function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+
+
+
+
+
+</script>
+   
+</body>
+</html> 
